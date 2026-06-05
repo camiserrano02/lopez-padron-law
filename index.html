@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     LOPEZ PADRON LAW, P.A.  —  website
+     To change wording, search the file for the word  EDIT
+     ============================================================ -->
+
+<title>Lopez Padron Law, P.A. — Coral Gables Estate &amp; Probate Attorney</title> <!-- EDIT: tab title -->
+<meta name="description" content="Lopez Padron Law, P.A. — Patricia Lopez Padron, estate planning, probate, and trust attorney serving Coral Gables and South Florida." /> <!-- EDIT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#15293f;          /* brand navy */
+    --ink-soft:#33495c;
+    --green:#235a3e;        /* brand forest green */
+    --green-light:#3a7a57;
+    --sage:#c6d6c8;         /* logo light accent */
+    --cream:#f6f8f5;        /* page background */
+    --cream-deep:#e9efe8;
+    --paper:#ffffff;
+    --line:rgba(21,41,63,.13);
+    --shadow:0 24px 60px -28px rgba(21,41,63,.42);
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"Libre Franklin", system-ui, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);color:var(--ink);background:var(--cream);
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:var(--font-body);font-size:.72rem;font-weight:600;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--green)}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+    background:rgba(246,248,245,.85);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand img{height:52px;width:auto;display:block}
+  .navlinks{display:flex;gap:2.2rem;align-items:center}
+  .navlinks a{font-size:.86rem;font-weight:500;letter-spacing:.02em;position:relative;color:var(--ink-soft)}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;
+    background:var(--green);transition:.3s}
+  .navlinks a:hover::after{width:100%}
+  .navlinks a:hover{color:var(--ink)}
+  .navcta{padding:.62rem 1.3rem;background:var(--green);color:#fff!important;
+    border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:.04em;transition:.25s}
+  .navcta:hover{background:var(--ink);transform:translateY(-1px)}
+  .navcta::after{display:none}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
+  .burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:118px 0 108px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(circle at 80% 16%, rgba(35,90,62,.14), transparent 46%),
+      linear-gradient(160deg,var(--cream) 0%,var(--cream-deep) 100%)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin:.6rem 0 1.4rem}
+  .hero h1 em{font-style:italic;color:var(--green)}
+  .hero p.lead{font-size:1.12rem;max-width:34ch;color:var(--ink-soft);margin-bottom:2.2rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{padding:.95rem 1.8rem;border-radius:2px;font-weight:600;font-size:.9rem;letter-spacing:.03em;
+    transition:.25s;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;border:0}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:var(--ink);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .hero-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;
+    padding:36px 34px;box-shadow:var(--shadow);position:relative}
+  .hero-card::before{content:"";position:absolute;top:-1px;left:-1px;width:46px;height:46px;
+    border-top:2px solid var(--green);border-left:2px solid var(--green)}
+  .hero-card h3{font-size:1.3rem;margin-bottom:1.1rem}
+  .stat-row{display:flex;gap:1rem;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid var(--line)}
+  .stat-row:last-child{border-bottom:0}
+  .stat-row .ic{color:var(--green);font-size:1.05rem;line-height:1.5}
+  .stat-row .l{font-size:.92rem;color:var(--ink-soft)}
+  .stat-row .l b{color:var(--ink);font-weight:600}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:60ch;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:.7rem 0 1rem}
+  .sec-head p{color:var(--ink-soft);font-size:1.05rem}
+
+  /* about */
+  .about{background:var(--ink);color:var(--cream)}
+  .about .eyebrow{color:var(--sage)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .about h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:.7rem 0 1.4rem}
+  .about p{color:rgba(246,248,245,.8);margin-bottom:1.1rem;max-width:46ch}
+  .about .pull{font-family:var(--font-display);font-size:1.45rem;font-style:italic;color:var(--cream);
+    border-left:3px solid var(--green-light);padding-left:1.3rem;line-height:1.4}
+
+  /* practice areas */
+  .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+  .area{background:var(--paper);padding:40px 34px;transition:.3s;position:relative}
+  .area:hover{background:var(--ink);color:var(--cream)}
+  .area .num{font-family:var(--font-display);font-size:.95rem;color:var(--green);font-weight:600}
+  .area:hover .num{color:var(--sage)}
+  .area h3{font-size:1.3rem;margin:1.4rem 0 .8rem}
+  .area p{font-size:.92rem;color:var(--ink-soft);transition:.3s}
+  .area:hover p{color:rgba(246,248,245,.82)}
+  .area .arrow{margin-top:1.3rem;font-size:.85rem;font-weight:600;letter-spacing:.04em;color:var(--green);
+    opacity:0;transform:translateX(-6px);transition:.3s}
+  .area:hover .arrow{opacity:1;transform:translateX(0);color:var(--sage)}
+
+  /* attorney (single) */
+  .attorney{background:var(--cream-deep)}
+  .att-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center;
+    background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:var(--shadow)}
+  .att-photo{min-height:420px;background:linear-gradient(150deg,var(--ink) 0%,var(--green) 120%);
+    display:flex;align-items:center;justify-content:center}
+  .att-photo span{font-family:var(--font-display);font-size:4.6rem;color:var(--sage);font-weight:500;letter-spacing:.04em}
+  .att-body{padding:44px 48px 44px 0}
+  .att-body .role{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:.6rem}
+  .att-body h3{font-size:2.1rem;margin-bottom:1.1rem}
+  .att-body p{color:var(--ink-soft);margin-bottom:1rem;max-width:52ch}
+  .att-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .att-meta div .k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:600}
+  .att-meta div .v{font-size:.95rem;color:var(--ink);margin-top:.2rem}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+  .contact-info h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:.7rem 0 1.4rem}
+  .contact-info p{color:var(--ink-soft);max-width:38ch;margin-bottom:2rem}
+  .info-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+  .info-item .k{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);
+    font-weight:600;min-width:88px;padding-top:3px}
+  .info-item .v{font-size:1rem}
+  .info-item .v a:hover{color:var(--green)}
+  form{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:38px 34px;box-shadow:var(--shadow)}
+  .field{margin-bottom:1.3rem}
+  .field label{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-soft);margin-bottom:.5rem}
+  .field input,.field select,.field textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--line);
+    border-radius:2px;font-family:var(--font-body);font-size:.95rem;background:var(--cream);color:var(--ink);transition:.2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--green);background:#fff}
+  .field textarea{resize:vertical;min-height:120px}
+  form .btn-primary{width:100%;justify-content:center;margin-top:.4rem}
+  .form-note{font-size:.78rem;color:var(--ink-soft);margin-top:1rem;text-align:center}
+  .disclaimer{font-size:.76rem;color:var(--ink-soft);max-width:70ch;margin-top:14px}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(246,248,245,.72);padding:60px 0 36px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;
+    padding-bottom:34px;border-bottom:1px solid rgba(246,248,245,.15)}
+  .foot-brand{font-family:var(--font-display);font-size:1.5rem;color:var(--cream);font-weight:600;letter-spacing:-.01em}
+  .foot-brand .dot{color:var(--green-light)}
+  .foot-cols{display:flex;gap:3rem;flex-wrap:wrap}
+  .foot-cols a{font-size:.86rem;display:block;padding:.2rem 0}
+  .foot-cols a:hover{color:var(--sage)}
+  .foot-cols .h{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.6rem}
+  .foot-bottom{padding-top:26px;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero-grid,.about-grid,.contact-grid,.att-grid{grid-template-columns:1fr;gap:40px}
+    .att-body{padding:0 34px 40px}.att-photo{min-height:300px}
+    .areas-grid{grid-template-columns:1fr 1fr}
+    .navlinks{position:fixed;inset:84px 0 auto 0;background:var(--cream);flex-direction:column;gap:0;padding:0;
+      max-height:0;overflow:hidden;transition:.35s;border-bottom:1px solid var(--line)}
+    .navlinks.open{max-height:400px;padding:14px 28px 24px}
+    .navlinks a{padding:14px 0;width:100%;border-bottom:1px solid var(--line)}
+    .navlinks .navcta{text-align:center;margin-top:12px;border-bottom:0}
+    .burger{display:flex}
+  }
+  @media(max-width:560px){.areas-grid{grid-template-columns:1fr}section{padding:70px 0}.hero{padding:74px 0 64px}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand" aria-label="Lopez Padron Law"><img src="logo.png" alt="Lopez Padron Law"></a>
+      <div class="navlinks" id="menu">
+        <a href="#about">About</a>
+        <a href="#practice">Practice Areas</a>
+        <a href="#attorney">Attorney</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="navcta">Free Consultation</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal in">
+        <span class="eyebrow">Coral Gables, Florida &nbsp;·&nbsp; Estate &amp; Probate Counsel</span>
+        <!-- EDIT: headline + subhead -->
+        <h1>Protecting your <em>legacy</em> and your loved ones.</h1>
+        <p class="lead">Lopez Padron Law, P.A. provides thoughtful, personal counsel in estate planning, probate, and trust matters across South Florida.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Request a Consultation →</a>
+          <a href="#practice" class="btn btn-ghost">Our Practice Areas</a>
+        </div>
+      </div>
+      <div class="hero-card reveal in">
+        <h3>What you can expect</h3>
+        <!-- EDIT: honest value points (no invented numbers) -->
+        <div class="stat-row"><span class="ic">◆</span><span class="l"><b>Bilingual service</b> — English &amp; Spanish</span></div>
+        <div class="stat-row"><span class="ic">◆</span><span class="l"><b>Personal attention</b> on every matter</span></div>
+        <div class="stat-row"><span class="ic">◆</span><span class="l"><b>Coral Gables office</b>, serving South Florida</span></div>
+        <div class="stat-row"><span class="ic">◆</span><span class="l"><b>Free initial</b> consultation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About the Firm</span>
+        <h2>Trusted guidance for life's most important decisions.</h2>
+        <!-- EDIT: about copy -->
+        <p>At Lopez Padron Law, P.A., we help individuals and families plan for the future, protect their assets, and navigate the probate and trust process with clarity and care.</p>
+        <p>Based in Coral Gables and serving clients throughout South Florida, the firm offers attentive, one-on-one representation in both English and Spanish.</p>
+      </div>
+      <div class="reveal">
+        <!-- EDIT: mission / pull quote -->
+        <p class="pull">"Every client deserves clear answers, careful planning, and an advocate who treats their matter as if it were her own."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRACTICE AREAS ================= -->
+<!-- EDIT: confirm/adjust these — keep only what the firm handles -->
+<section id="practice">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Practice Areas</h2>
+      <p>Focused representation in estate, trust, and probate matters for clients across South Florida.</p>
+    </div>
+    <div class="areas-grid reveal">
+      <div class="area"><span class="num">01</span><h3>Estate Planning</h3><p>Wills, trusts, powers of attorney, and healthcare directives tailored to your goals and family.</p><div class="arrow">Learn more →</div></div>
+      <div class="area"><span class="num">02</span><h3>Wills &amp; Trusts</h3><p>Drafting and updating wills and revocable or irrevocable trusts to protect and transfer assets.</p><div class="arrow">Learn more →</div></div>
+      <div class="area"><span class="num">03</span><h3>Probate Administration</h3><p>Guiding personal representatives and families through the Florida probate process, start to finish.</p><div class="arrow">Learn more →</div></div>
+      <div class="area"><span class="num">04</span><h3>Trust &amp; Estate Litigation</h3><p>Representation in will contests, trust disputes, and fiduciary matters when conflicts arise.</p><div class="arrow">Learn more →</div></div>
+      <div class="area"><span class="num">05</span><h3>Elder Law</h3><p>Planning and counsel addressing the legal needs of aging clients and their families.</p><div class="arrow">Learn more →</div></div>
+      <div class="area"><span class="num">06</span><h3>Guardianship</h3><p>Establishing and administering guardianships to protect those who cannot protect themselves.</p><div class="arrow">Learn more →</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ATTORNEY ================= -->
+<section class="attorney" id="attorney">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Your Attorney</span>
+      <h2>Meet Patricia Lopez Padron</h2>
+    </div>
+    <div class="att-grid reveal">
+      <div class="att-photo"><span>PLP</span></div>
+      <div class="att-body">
+        <div class="role">Founding Attorney</div>
+        <h3>Patricia Lopez Padron</h3>
+        <!-- EDIT: bio — replace with Patricia's real background, admissions, education, experience -->
+        <p>Patricia Lopez Padron founded Lopez Padron Law, P.A. to provide South Florida families with attentive, personalized counsel in estate planning, probate, and trust matters.</p>
+        <p>She is committed to guiding each client through complex decisions with clarity, compassion, and care — in both English and Spanish.</p>
+        <div class="att-meta">
+          <div><div class="k">Bar Admission</div><div class="v">The Florida Bar</div></div>
+          <div><div class="k">Languages</div><div class="v">English &amp; Spanish</div></div>
+          <div><div class="k">Office</div><div class="v">Coral Gables, FL</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Request a free consultation.</h2>
+        <p>Tell us about your situation. We respond promptly and treat every inquiry with discretion.</p>
+        <div class="info-item"><span class="k">Office</span><span class="v">2121 Ponce de Leon Blvd., Suite 740<br>Coral Gables, FL 33134</span></div>
+        <div class="info-item"><span class="k">Phone</span><span class="v"><a href="tel:+13053946327">(305) 394-6327</a> &nbsp;·&nbsp; Office<br><a href="tel:+13053904987">(305) 390-4987</a> &nbsp;·&nbsp; Direct</span></div>
+        <div class="info-item"><span class="k">Email</span><span class="v"><a href="mailto:Admin@LopezPadronLaw.com">Admin@LopezPadronLaw.com</a></span></div>
+        <div class="info-item"><span class="k">Follow</span><span class="v"><a href="https://www.instagram.com/lopezpadronlaw" target="_blank" rel="noopener">@lopezpadronlaw</a></span></div>
+      </div>
+
+      <!-- Works free on Netlify via data-netlify. Hosting elsewhere? Swap to Formspree:
+           <form action="https://formspree.io/f/YOURID" method="POST"> -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="reveal">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none"><label>Leave blank: <input name="bot-field" /></label></p>
+        <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+        <div class="field"><label for="matter">Type of Matter</label>
+          <select id="matter" name="matter">
+            <option>Estate Planning</option><option>Wills &amp; Trusts</option><option>Probate Administration</option>
+            <option>Trust &amp; Estate Litigation</option><option>Elder Law</option><option>Guardianship</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="msg">How can we help?</label><textarea id="msg" name="message" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message →</button>
+        <p class="form-note">We typically respond within one business day.</p>
+        <p class="disclaimer">Submitting this form does not create an attorney-client relationship. Please do not include confidential or time-sensitive information.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Lopez Padron Law<span class="dot">.</span></div>
+      <div class="foot-cols">
+        <div>
+          <div class="h">Explore</div>
+          <a href="#about">About</a><a href="#practice">Practice Areas</a>
+          <a href="#attorney">Attorney</a><a href="#contact">Contact</a>
+        </div>
+        <div>
+          <div class="h">Contact</div>
+          <a href="tel:+13053946327">(305) 394-6327</a>
+          <a href="mailto:Admin@LopezPadronLaw.com">Admin@LopezPadronLaw.com</a>
+          <a href="https://www.instagram.com/lopezpadronlaw" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div>
+          <div class="h">Office</div>
+          <a href="#contact">2121 Ponce de Leon Blvd.<br>Suite 740, Coral Gables, FL 33134</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Lopez Padron Law, P.A. All rights reserved.</span>
+      <span>Attorney Advertising. Prior results do not guarantee a similar outcome.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
