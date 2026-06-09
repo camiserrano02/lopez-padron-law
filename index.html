@@ -20,9 +20,9 @@
   :root{
     --ink:#15293f;          /* brand navy */
     --ink-soft:#33495c;
-    --green:#235a3e;        /* brand forest green */
-    --green-light:#3a7a57;
-    --sage:#c6d6c8;         /* logo light accent */
+    --green:#6e7b3f;        /* olive green */
+    --green-light:#97a566;
+    --sage:#c9d1ab;         /* pale olive accent */
     --cream:#f6f8f5;        /* page background */
     --cream-deep:#e9efe8;
     --paper:#ffffff;
@@ -45,7 +45,9 @@
   header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
     background:rgba(246,248,245,.85);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-  .brand img{height:52px;width:auto;display:block}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand img{height:50px;width:auto;display:block}
+  .brand .bname{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--ink);letter-spacing:.01em;line-height:1.05}
   .navlinks{display:flex;gap:2.2rem;align-items:center}
   .navlinks a{font-size:.86rem;font-weight:500;letter-spacing:.02em;position:relative;color:var(--ink-soft)}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;
@@ -62,7 +64,7 @@
   /* ---------- HERO ---------- */
   .hero{position:relative;padding:118px 0 108px;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;z-index:-1;
-    background:radial-gradient(circle at 80% 16%, rgba(35,90,62,.14), transparent 46%),
+    background:radial-gradient(circle at 80% 16%, rgba(110,123,63,.16), transparent 46%),
       linear-gradient(160deg,var(--cream) 0%,var(--cream-deep) 100%)}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
   .hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin:.6rem 0 1.4rem}
@@ -103,7 +105,7 @@
 
   /* practice areas */
   .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
-  .area{background:var(--paper);padding:40px 34px;transition:.3s;position:relative}
+  .area{display:block;background:var(--paper);padding:40px 34px;transition:.3s;position:relative}
   .area:hover{background:var(--ink);color:var(--cream)}
   .area .num{font-family:var(--font-display);font-size:.95rem;color:var(--green);font-weight:600}
   .area:hover .num{color:var(--sage)}
@@ -185,7 +187,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a href="#top" class="brand" aria-label="Lopez Padron Law"><img src="logo.png" alt="Lopez Padron Law"></a>
+      <a href="#top" class="brand" aria-label="Lopez Padron Law"><img src="logo.png" alt="Lopez Padron Law monogram"><span class="bname">Lopez Padron Law</span></a>
       <div class="navlinks" id="menu">
         <a href="#about">About</a>
         <a href="#practice">Practice Areas</a>
@@ -253,12 +255,12 @@
       <p>Focused representation in estate, trust, and probate matters for clients across South Florida.</p>
     </div>
     <div class="areas-grid reveal">
-      <div class="area"><span class="num">01</span><h3>Estate Planning</h3><p>Wills, trusts, powers of attorney, and healthcare directives tailored to your goals and family.</p><div class="arrow">Learn more →</div></div>
-      <div class="area"><span class="num">02</span><h3>Wills &amp; Trusts</h3><p>Drafting and updating wills and revocable or irrevocable trusts to protect and transfer assets.</p><div class="arrow">Learn more →</div></div>
-      <div class="area"><span class="num">03</span><h3>Probate Administration</h3><p>Guiding personal representatives and families through the Florida probate process, start to finish.</p><div class="arrow">Learn more →</div></div>
-      <div class="area"><span class="num">04</span><h3>Trust &amp; Estate Litigation</h3><p>Representation in will contests, trust disputes, and fiduciary matters when conflicts arise.</p><div class="arrow">Learn more →</div></div>
-      <div class="area"><span class="num">05</span><h3>Elder Law</h3><p>Planning and counsel addressing the legal needs of aging clients and their families.</p><div class="arrow">Learn more →</div></div>
-      <div class="area"><span class="num">06</span><h3>Guardianship</h3><p>Establishing and administering guardianships to protect those who cannot protect themselves.</p><div class="arrow">Learn more →</div></div>
+      <a class="area" href="#contact"><span class="num">01</span><h3>Estate Planning</h3><p>Wills, trusts, powers of attorney, and healthcare directives — drafted and updated to protect your assets and provide for your family.</p><div class="arrow">Get in touch →</div></a>
+      <a class="area" href="#contact"><span class="num">02</span><h3>Probate Administration</h3><p>Guiding personal representatives and families through the Florida probate process, start to finish.</p><div class="arrow">Get in touch →</div></a>
+      <a class="area" href="#contact"><span class="num">03</span><h3>Trust &amp; Estate Litigation</h3><p>Representation in will contests, trust disputes, and fiduciary matters when conflicts arise.</p><div class="arrow">Get in touch →</div></a>
+      <a class="area" href="#contact"><span class="num">04</span><h3>Elder Law</h3><p>Planning and counsel addressing the legal needs of aging clients and their families.</p><div class="arrow">Get in touch →</div></a>
+      <a class="area" href="#contact"><span class="num">05</span><h3>Guardianship</h3><p>Establishing and administering guardianships to protect those who cannot protect themselves.</p><div class="arrow">Get in touch →</div></a>
+      <a class="area" href="#contact"><span class="num">06</span><h3>Prenuptial &amp; Postnuptial Agreements</h3><p>Clear, thoughtful agreements that protect both partners and bring peace of mind before and during marriage.</p><div class="arrow">Get in touch →</div></a>
     </div>
   </div>
 </section>
@@ -275,13 +277,14 @@
       <div class="att-body">
         <div class="role">Founding Attorney</div>
         <h3>Patricia Lopez Padron</h3>
-        <!-- EDIT: bio — replace with Patricia's real background, admissions, education, experience -->
-        <p>Patricia Lopez Padron founded Lopez Padron Law, P.A. to provide South Florida families with attentive, personalized counsel in estate planning, probate, and trust matters.</p>
-        <p>She is committed to guiding each client through complex decisions with clarity, compassion, and care — in both English and Spanish.</p>
+        <!-- EDIT: bio -->
+        <p>Patricia Lopez Padron earned her law degree from St. Thomas University School of Law, where she completed a certificate in Elder Law. Her practice spans estate planning, probate, and trust matters, with additional experience in family law, including business succession planning.</p>
+        <p>Patricia understands the real concerns behind every estate, family, and business decision, and she meets clients where they are — with patience, plain answers, and service. She built Lopez Padron Law, P.A. to be a personable, approachable practice where clients feel genuinely heard.</p>
         <div class="att-meta">
+          <div><div class="k">Education</div><div class="v">St. Thomas University School of Law</div></div>
+          <div><div class="k">Certificate</div><div class="v">Elder Law</div></div>
           <div><div class="k">Bar Admission</div><div class="v">The Florida Bar</div></div>
           <div><div class="k">Languages</div><div class="v">English &amp; Spanish</div></div>
-          <div><div class="k">Office</div><div class="v">Coral Gables, FL</div></div>
         </div>
       </div>
     </div>
@@ -298,15 +301,12 @@
         <p>Tell us about your situation. We respond promptly and treat every inquiry with discretion.</p>
         <div class="info-item"><span class="k">Office</span><span class="v">2121 Ponce de Leon Blvd., Suite 740<br>Coral Gables, FL 33134</span></div>
         <div class="info-item"><span class="k">Phone</span><span class="v"><a href="tel:+13053946327">(305) 394-6327</a> &nbsp;·&nbsp; Office<br><a href="tel:+13053904987">(305) 390-4987</a> &nbsp;·&nbsp; Direct</span></div>
-        <div class="info-item"><span class="k">Email</span><span class="v"><a href="mailto:Admin@LopezPadronLaw.com">Admin@LopezPadronLaw.com</a></span></div>
+        <div class="info-item"><span class="k">Email</span><span class="v"><a href="mailto:patricia@lopezpadronlaw.com">patricia@lopezpadronlaw.com</a></span></div>
         <div class="info-item"><span class="k">Follow</span><span class="v"><a href="https://www.instagram.com/lopezpadronlaw" target="_blank" rel="noopener">@lopezpadronlaw</a></span></div>
       </div>
 
-      <!-- Works free on Netlify via data-netlify. Hosting elsewhere? Swap to Formspree:
-           <form action="https://formspree.io/f/YOURID" method="POST"> -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="reveal">
-        <input type="hidden" name="form-name" value="contact" />
-        <p style="display:none"><label>Leave blank: <input name="bot-field" /></label></p>
+      <!-- On submit, opens the visitor's email app with a message pre-addressed to admin@lopezpadronlaw.com -->
+      <form id="contactForm" class="reveal">
         <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" required></div>
         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
         <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
@@ -339,7 +339,7 @@
         <div>
           <div class="h">Contact</div>
           <a href="tel:+13053946327">(305) 394-6327</a>
-          <a href="mailto:Admin@LopezPadronLaw.com">Admin@LopezPadronLaw.com</a>
+          <a href="mailto:patricia@lopezpadronlaw.com">patricia@lopezpadronlaw.com</a>
           <a href="https://www.instagram.com/lopezpadronlaw" target="_blank" rel="noopener">Instagram</a>
         </div>
         <div>
@@ -362,6 +362,18 @@
   document.getElementById('yr').textContent=new Date().getFullYear();
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+  // Contact form -> opens visitor's email app addressed to Patricia
+  var cf=document.getElementById('contactForm');
+  if(cf){cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var el=cf.elements;
+    var v=function(n){return (el[n]&&el[n].value?el[n].value:'').trim();};
+    var name=v('name'),email=v('email'),phone=v('phone'),matter=v('matter'),message=v('message');
+    var subject='Consultation request'+(name?' — '+name:'')+(matter?' ('+matter+')':'');
+    var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nType of matter: '+matter+'\n\nMessage:\n'+message;
+    window.location.href='mailto:admin@lopezpadronlaw.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  });}
+
 </script>
 </body>
 </html>
